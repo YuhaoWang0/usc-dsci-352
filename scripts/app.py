@@ -1,4 +1,3 @@
-
 import os
 from pathlib import Path
 
@@ -12,12 +11,16 @@ MODEL_PATH = PROJECT_ROOT / "outputs" / "telco" / "telco_pipeline.pkl"
 st.set_page_config(page_title="Telco Churn Predictor", layout="wide")
 st.title("Telco Customer Churn Prediction")
 
+
 st.write(
     "Upload a Telco customer CSV file and the model will predict churn probability."
 )
 
 @st.cache_resource
 def load_model():
+    if not MODEL_PATH.exists():
+        st.error(f"Model file not found: {MODEL_PATH}")
+        st.stop()
     return joblib.load(MODEL_PATH)
 
 def clean_telco_input(df: pd.DataFrame) -> pd.DataFrame:
