@@ -1,0 +1,31 @@
+[
+  {
+    "name": "Gradient Boosting",
+    "type": "sklearn",
+    "auc": 0.8433620088351547
+  },
+  {
+    "name": "Logistic Regression",
+    "type": "sklearn",
+    "auc": 0.8418610659019866
+  },
+  {
+    "name": "SGDClassifier",
+    "type": "sklearn",
+    "auc": 0.8296442687747035
+  },
+  {
+    "name": "Random Forest",
+    "type": "sklearn",
+    "auc": 0.8160156552739674
+  },
+  {
+    "name": "keras_mlp",
+    "type": "keras",
+    "auc": 0.8416156449404532,
+    "accuracy": 0.7984386089425124,
+    "grad_abs_mean": 0.000846223090775311,
+    "grad_abs_max": 0.02008361555635929,
+    "grad_std": 0.0014038418885320425
+  }
+]
